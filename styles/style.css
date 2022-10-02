@@ -115,8 +115,17 @@ nav a{
 }
 
 .buscador input{
-    height: 2rem;
+    height: 2.3rem;
     width: 60%;
+}
+
+.search-button{
+    background-color: rgb(16, 16, 85);
+}
+
+.search-button img{
+    width: 30px;
+    height: 30px;
 }
 
 .container-cards{
@@ -178,6 +187,101 @@ nav a{
     width: 5rem;
     border: 1px solid black;
     box-shadow: -5px -4px grey;
+}
+
+/* ----------CONTACT INDEX--------- */
+
+.formulario{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name label, .email label, .mensagge label{
+    color: rgba(217,3,104,255);
+    font-size: 3rem;
+    height: 20%;
+}
+
+.name fieldset, .email fieldset{
+    width: 50rem;
+    height: 10rem;
+    border: none;
+}
+
+.mensagge fieldset{
+    width: 50rem;
+    height: 18rem;
+    border: none;
+}
+
+.mensagge input{
+    width: 100%;
+    height: 80%;
+    font-size: 3rem;
+    text-align: left;
+}
+
+.name input, .email input{
+    width: 100%;
+    height: 60%;
+    font-size: 3rem;
+}
+
+.submit-button{
+    padding-left: 40rem;
+}
+
+.submit-button input{
+    height: 2.5rem;
+    width: 10rem;
+    font-size: 2rem;
+}
+
+/* ---------STATS----------- */
+
+.tablas-general{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla-1, .tabla-2, .tabla-3{
+    border: 2px solid black;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: rgb(16, 16, 85);
+    font-size: 3rem;
+    text-align: left;
+}
+
+thead th{
+    padding-left: .5rem;
+    color: rgba(217,3,104,255);
+}
+
+tbody{
+    background-color: rgb(17, 17, 164);
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tbody td{
+    width: 33%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: .5rem;
+    color: rgba(217,3,104,255);
 }
 
 /* -----FOOTER-------- */
