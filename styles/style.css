@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fresca', sans-serif;
+}
+
+/* ------HEADER & TITLE --------- */
+.container-header {
+width: 100%;
+height: 10vh;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+background-color: rgb(16, 16, 85);
+}
+
+.logo{
+    margin-left: 2rem;
+}
+
+.logo img{
+    width: 250px;
+}
+
+nav{ 
+    margin-right: 3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a{
+    width: 11rem;
+    height: 4.3rem;
+    padding: .4rem;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: rgba(217,3,104,255);
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: black;
+    color: rgba(217,3,104,255);
+    border: 2px solid rgba(217,3,104,255);
+}
+
+.menu-carousel{
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(17, 17, 164);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flecha-izq img, .flecha-der img{
+    width: 100px;
+    height: 100px;
+}
+
+.titulo-pagina{
+    font-size: 3rem;
+    color: rgba(217,3,104,255);
+}
+
+/* --------MAIN SECTION------- */
+
+.general-container{
+    /* background-image: url(https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png); */
+    background-image: url(../assets/cool-background.png);
+    min-height: 70vh;
+}
+
+.filtrador{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.seleccionador{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.seleccionador fieldset{
+    border: none;
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1rem;
+    color: white;
+}
+
+.seleccionador fieldset label{
+    font-size: 1.7rem;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-top: 1rem;
+    gap: .2rem;
+}
+
+.buscador input{
+    height: 2rem;
+    width: 60%;
+}
+
+.container-cards{
+
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.card{
+    background-color: rgb(135, 197, 252);
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.card img{
+    width: 90%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgb(16, 16, 85);
+}
+
+.titulo-card{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+
+.titulo-card h3{
+    font-size: 2.2rem;
+}
+
+.titulo-card p{
+    font-size: 1.4rem;
+}
+
+.pie-de-card{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.pie-de-card p{
+    font-size: 1.2rem;
+}
+
+.pie-de-card button{
+    width: 5rem;
+    border: 1px solid black;
+    box-shadow: -5px -4px grey;
+}
+
+/* -----FOOTER-------- */
+
+.container-footer{
+    min-height: 12vh;
+    background-color:  rgb(17, 17, 164);
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 3rem;
+}
+
+.instagram img, .facebook img, .whatsapp img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.texto-extra{
+    color: rgba(217,3,104,255);
+    width: 50%;
+    padding-right: 10rem;
+}
+
+.texto-extra p{
+    text-align: end;
+    font-size: 3rem;
+}
