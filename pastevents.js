@@ -13,7 +13,7 @@ for (let i = 0; i < data.events.length; i++){
                 <p>${data.events[i].description}</p>
               </div>
               <div class="pie-de-card">
-                <p>Price: ${data.events[i].price}</p>
+                <p>Price: $${data.events[i].price}</p>
                 <a class="button" href="./details.html">See more</a>
               </div>
         `
