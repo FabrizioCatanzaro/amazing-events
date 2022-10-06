@@ -558,13 +558,17 @@ tbody td{
         height: 550px;
         justify-content: space-evenly;
     }
+
+    .card:hover{
+        transform: none
+    }
     
     .titulo-card h3{
-        font-size: 4.7rem;
+        font-size: 4rem;
     }
     
     .titulo-card p{
-        font-size: 2.7rem;
+        font-size: 1.5rem;
     }
     
     .pie-de-card p{
@@ -668,11 +672,11 @@ tbody td{
     }
     
     .titulo-card h3{
-        font-size: 3.1rem;
+        font-size: 2.2rem;
     }
     
     .titulo-card p{
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
     
     .pie-de-card p{
