@@ -2,8 +2,9 @@ let container = document.getElementsByClassName('container-cards')[0]
 
 for (let i = 0; i < data.events.length; i++){
     if (data.currentDate > data.events[i].date){
-        let card = document.createElement('div')
-        card.innerHTML +=
+/*         let card = document.createElement('div')
+        card.className = 'card' */
+        container.innerHTML +=
         `
         <div class="card">
         <img src="${data.events[i].image}" alt="${data.events[i].name}">
@@ -16,6 +17,5 @@ for (let i = 0; i < data.events.length; i++){
                 <a class="button" href="./details.html">See more</a>
               </div>
         `
-        container.appendChild(card)
     }
 }

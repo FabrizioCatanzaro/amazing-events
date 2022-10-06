@@ -1,7 +1,7 @@
 let containerDetails = document.getElementsByClassName('container-cards-details')[0]
 
-for (let i = 0; i < data.events.length; i++){
-    // if (data.events[i]._id = FALTAFUNCION){
+/* for (let i = 0; i < data.events.length; i++){
+    if (data.events[i]._id = FALTAFUNCION){
         let card = document.createElement('div')
         card.innerHTML +=
         `
@@ -20,4 +20,4 @@ for (let i = 0; i < data.events.length; i++){
         `
         containerDetails.appendChild(card)
     }
-// }
+} */
