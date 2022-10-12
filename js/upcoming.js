@@ -1,9 +1,7 @@
 let container = document.getElementsByClassName('container-cards')[0]
 
-for (let i = 0; i < data.events.length; i++){
+/* for (let i = 0; i < data.events.length; i++){
   if (data.currentDate < data.events[i].date){
-/*         let card = document.createElement('div')
-      card.className = 'card' */
       container.innerHTML +=
       `
       <div class="card">
@@ -17,5 +15,29 @@ for (let i = 0; i < data.events.length; i++){
               <a class="button" href="./details.html">See more</a>
             </div>
       `
+  }
+}
+ */
+
+imprimirCards(container, data)
+
+
+function imprimirCards(contenedor, array) {
+  for (let i = 0; i < array.events.length; i++) {
+    if (array.currentDate < array.events[i].date) {
+      contenedor.innerHTML +=
+        `
+    <div class="card">
+    <img src="${array.events[i].image}" alt="${array.events[i].name}">
+          <div class="titulo-card">
+            <h3>${array.events[i].name}</h3>
+            <p>${array.events[i].description}</p>
+          </div>
+          <div class="pie-de-card">
+            <p>Price: $${array.events[i].price}</p>
+            <a class="button" href="./details.html">See more</a>
+          </div>
+    `
+    }
   }
 }
