@@ -19,10 +19,10 @@ let container = document.getElementsByClassName('container-cards')[0]
 }
  */
 
-imprimirCards(container, data)
+// imprimirCards(container, data)
 
 
-function imprimirCards(contenedor, array) {
+/* function imprimirCards(contenedor, array) {
   for (let i = 0; i < array.events.length; i++) {
     if (array.currentDate < array.events[i].date) {
       contenedor.innerHTML +=
@@ -40,4 +40,25 @@ function imprimirCards(contenedor, array) {
     `
     }
   }
+} */
+
+function imprimirEventosFuturos (contenedor, array){
+  return array.events.filter( event => event.date > array.currentDate)
+  .map( event => {
+    contenedor.innerHTML +=
+        `
+      <div class="card">
+      <img src="${event.image}" alt="${event.name}">
+            <div class="titulo-card">
+              <h3>${event.name}</h3>
+              <p>${event.description}</p>
+            </div>
+            <div class="pie-de-card">
+              <p>Price: $${event.price}</p>
+              <a class="button" href="./details.html">See more</a>
+            </div>
+      `
+  } )
 }
+
+imprimirEventosFuturos(container, data)
