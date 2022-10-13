@@ -37,7 +37,7 @@ let container = document.getElementsByClassName('container-cards')[0]
   }
 } */
 
-function mapearEventos (contenedor, array){
+function imprimirEventos (contenedor, array){
   return array.events.map( event => {
     contenedor.innerHTML +=
         `
@@ -55,47 +55,7 @@ function mapearEventos (contenedor, array){
   } )
 }
 
-mapearEventos(container, data)
-
-/* let mapeado = data.events.map( event => {
-  container.innerHTML +=
-      `
-    <div class="card">
-    <img src="${event.image}" alt="${event.name}">
-          <div class="titulo-card">
-            <h3>${event.name}</h3>
-            <p>${event.description}</p>
-          </div>
-          <div class="pie-de-card">
-            <p>Price: $${event.price}</p>
-            <a class="button" href="./details.html">See more</a>
-          </div>
-    `
-} ) */
-
-
-/* function imprimirCards(contenedor, array) {
-  array.events.map(array => {
-    contenedor.innerHTML +=
-      `
-    <div class="card">
-    <img src="${array.events[i].image}" alt="${array.events[i].name}">
-          <div class="titulo-card">
-            <h3>${array.events[i].name}</h3>
-            <p>${array.events[i].description}</p>
-          </div>
-          <div class="pie-de-card">
-            <p>Price: $${array.events[i].price}</p>
-            <a class="button" href="./details.html">See more</a>
-          </div>
-    `
-  })
-} */
-
-
-
-
-
+imprimirEventos(container, data)
 
 /* let searchBar = document.getElementsByClassName('search-bar')
 
