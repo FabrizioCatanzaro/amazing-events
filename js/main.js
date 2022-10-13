@@ -57,6 +57,31 @@ function imprimirEventos (contenedor, array){
 
 imprimirEventos(container, data)
 
+// let buttonDetails = document.querySelector('#button')
+
+// console.log(buttonDetails);
+
+// function buscarContenido(evento){
+//   return array.events.filter( event => event.date > array.currentDate)
+//   .map( event => {
+//     contenedor.innerHTML +=
+//         `
+//       <div class="card">
+//       <img src="${event.image}" alt="${event.name}">
+//             <div class="titulo-card">
+//               <h3>${event.name}</h3>
+//               <p>${event.description}</p>
+//             </div>
+//             <div class="pie-de-card">
+//               <p>Price: $${event.price}</p>
+//               <a class="button" href="./details.html">See more</a>
+//             </div>
+//       `
+//   } )
+// }
+
+/* buttonDetails.addEventListener('click') */
+
 /* let searchBar = document.getElementsByClassName('search-bar')
 
 searchBar.addEventListener('change', function (event) {
