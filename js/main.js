@@ -16,13 +16,13 @@ let container = document.getElementsByClassName('container-cards')[0]
   `
 } */
 
-imprimirCards(container, data)
+// imprimirCards(container, data)
 
 
-function imprimirCards(contenedor, array){
-  for (let i = 0; i < array.events.length; i++){
+/* function imprimirCards(contenedor, array) {
+  for (let i = 0; i < array.events.length; i++) {
     contenedor.innerHTML +=
-    `
+      `
     <div class="card">
     <img src="${array.events[i].image}" alt="${array.events[i].name}">
           <div class="titulo-card">
@@ -35,4 +35,71 @@ function imprimirCards(contenedor, array){
           </div>
     `
   }
+} */
+
+function mapearEventos (contenedor, array){
+  return array.events.map( event => {
+    contenedor.innerHTML +=
+        `
+      <div class="card">
+      <img src="${event.image}" alt="${event.name}">
+            <div class="titulo-card">
+              <h3>${event.name}</h3>
+              <p>${event.description}</p>
+            </div>
+            <div class="pie-de-card">
+              <p>Price: $${event.price}</p>
+              <a class="button" href="./details.html">See more</a>
+            </div>
+      `
+  } )
 }
+
+mapearEventos(container, data)
+
+/* let mapeado = data.events.map( event => {
+  container.innerHTML +=
+      `
+    <div class="card">
+    <img src="${event.image}" alt="${event.name}">
+          <div class="titulo-card">
+            <h3>${event.name}</h3>
+            <p>${event.description}</p>
+          </div>
+          <div class="pie-de-card">
+            <p>Price: $${event.price}</p>
+            <a class="button" href="./details.html">See more</a>
+          </div>
+    `
+} ) */
+
+
+/* function imprimirCards(contenedor, array) {
+  array.events.map(array => {
+    contenedor.innerHTML +=
+      `
+    <div class="card">
+    <img src="${array.events[i].image}" alt="${array.events[i].name}">
+          <div class="titulo-card">
+            <h3>${array.events[i].name}</h3>
+            <p>${array.events[i].description}</p>
+          </div>
+          <div class="pie-de-card">
+            <p>Price: $${array.events[i].price}</p>
+            <a class="button" href="./details.html">See more</a>
+          </div>
+    `
+  })
+} */
+
+
+
+
+
+
+/* let searchBar = document.getElementsByClassName('search-bar')
+
+searchBar.addEventListener('change', function (event) {
+  mentors = filter('isSpecialist', event.target.value)
+  updateMentorsList(mentorsList, mentors, appendMentorToList)
+}) */
