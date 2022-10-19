@@ -116,7 +116,7 @@ nav a:hover{
 }
 
 .seleccionador{
-    width: 50%;
+    width: 65%;
     display: flex;
     justify-content: center;
 }
@@ -124,7 +124,7 @@ nav a:hover{
 .seleccionador fieldset{
     border: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     padding-top: 1rem;
     color: white;
 }
@@ -138,7 +138,7 @@ nav a:hover{
 .buscador{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 35%;
     padding-top: 1rem;
     gap: .2rem;
 }
@@ -198,6 +198,12 @@ nav a:hover{
     flex-direction: column;
     width: 90%;
     align-items: center;
+}
+
+#category-css{
+    background-color: black;
+    padding: 2%;
+    border-radius: 10px;
 }
 
 .titulo-card h3{
