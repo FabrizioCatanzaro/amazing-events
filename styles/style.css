@@ -158,6 +158,21 @@ nav a:hover{
     height: 30px;
 }
 
+.not-found{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid white;
+    border-radius: 10px;
+    padding: 1.4rem;
+}
+
+.not-found h3{
+    font-size: 3.7rem;
+    color: rgb(16, 16, 85);
+}
+
 .container-cards{
 
     padding: 3rem;

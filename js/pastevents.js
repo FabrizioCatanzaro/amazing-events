@@ -16,7 +16,7 @@ function imprimirEventosPasados(contenedor, array) {
             </div>
             <div class="pie-de-card">
               <p>Price: $${eve.price}</p>
-              <a class="button" href="./details.html">See more</a>
+              <a class="button" href="./details.html?id=${eve._id}">See more</a>
             </div>
       `
   })
@@ -33,8 +33,19 @@ barraBuscador.addEventListener('input', (evento) => {
   let filtrados = pastEvents.filter((ev) =>
     ev.name.toLowerCase().includes(evento.target.value.toLowerCase())
   )
-  container.innerHTML = ""
-  imprimirEventosPasados(container, filtrados)
+
+  if (filtrados.length === 0 || filtrados === false || filtrados === undefined) {
+    container.innerHTML =
+    `
+    <div class="not-found">
+      <h3>No results found for your search. Please try again!</h3>
+    </div>
+    `
+  } else if (filtrados !== 0) {
+    container.innerHTML = ""
+    imprimirEventosPasados(container, filtrados)
+  }
+
 })
 
 // ------------ CHECKBOXES --------------
@@ -53,15 +64,20 @@ for (element of checkboxes) {
 function buscar(event, array) {
   // console.log(event.target.checked);
   let checkboxesActivados = document.querySelectorAll('.checkbox:checked')
-  // console.log(checkboxesActivados);
   let arrayFiltrado = []
 
-  if (event.target.checked) {
-    arrayFiltrado = array.filter(ele => ele.category.toLowerCase() === event.target.value.toLowerCase())
-  } else {
+  for (let cadacheck of checkboxesActivados){
+    let nuevoArray = array.filter(eve => eve.category.toLowerCase() === cadacheck.value.toLowerCase())
+    // console.log(nuevoArray);
+    arrayFiltrado = arrayFiltrado.concat(nuevoArray)
+  }
+
+  // console.log(arrayFiltrado);
+
+  if (arrayFiltrado.length === 0) {
     arrayFiltrado = array
     arrayFiltrado = [...arrayFiltrado]
   }
+
   imprimirEventosPasados(container, arrayFiltrado)
-  console.log(arrayFiltrado);
 }
