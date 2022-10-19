@@ -1,90 +1,83 @@
+// guardo en la variable "container" el elemento html "container-cards"
 let container = document.getElementsByClassName('container-cards')[0]
+let totalEventos = data.events
 
-/* for (let i = 0; i < data.events.length; i++){
-  container.innerHTML +=
-  `
-  <div class="card">
-  <img src="${data.events[i].image}" alt="${data.events[i].name}">
-        <div class="titulo-card">
-          <h3>${data.events[i].name}</h3>
-          <p>${data.events[i].description}</p>
-        </div>
-        <div class="pie-de-card">
-          <p>Price: $${data.events[i].price}</p>
-          <a class="button" href="./details.html">See more</a>
-        </div>
-  `
-} */
-
-// imprimirCards(container, data)
-
-
-/* function imprimirCards(contenedor, array) {
-  for (let i = 0; i < array.events.length; i++) {
+// creo la funcion que recorre cada "evento" e imprime dentro del "contenedor" dado
+function imprimirEventos(contenedor, array) {
+  contenedor.innerHTML = ""
+  array.forEach((eve) => {
     contenedor.innerHTML +=
       `
-    <div class="card">
-    <img src="${array.events[i].image}" alt="${array.events[i].name}">
-          <div class="titulo-card">
-            <h3>${array.events[i].name}</h3>
-            <p>${array.events[i].description}</p>
-          </div>
-          <div class="pie-de-card">
-            <p>Price: $${array.events[i].price}</p>
-            <a class="button" href="./details.html">See more</a>
-          </div>
-    `
-  }
-} */
-
-function imprimirEventos (contenedor, array){
-  return array.events.map( event => {
-    contenedor.innerHTML +=
-        `
       <div class="card">
-      <img src="${event.image}" alt="${event.name}">
+      <img src="${eve.image}" alt="${eve.name}">
             <div class="titulo-card">
-              <h3>${event.name}</h3>
-              <p>${event.description}</p>
+              <p id="category-css">${eve.category}</p>
+              <h3>${eve.name}</h3>
+              <p>${eve.description}</p>
             </div>
             <div class="pie-de-card">
-              <p>Price: $${event.price}</p>
+              <p>Price: $${eve.price}</p>
               <a class="button" href="./details.html">See more</a>
             </div>
       `
-  } )
+  })
+}
+//console.log(totalEventos);
+imprimirEventos(container, totalEventos)
+
+// -------- BARRA DE BUSQUEDA ----------------
+
+let barraBuscador = document.getElementById('search-bar')
+
+barraBuscador.addEventListener('input', (evento) => {
+
+  let filtrados = totalEventos.filter((ev) =>
+    ev.name.toLowerCase().includes(evento.target.value.toLowerCase())
+  )
+  container.innerHTML = ""
+  imprimirEventos(container, filtrados)
+})
+
+// ----------- CATEGORIAS --------------
+
+let categorias = new Set(totalEventos.map(element => element.category))
+categorias = [...categorias]
+console.log(categorias);
+
+// --------- SEPARANDO EVENTOS POR CATEGORIAS ------------
+
+let arrrayEventos = categorias.map(cadaCategoria => {
+
+  let categoriasFiltradas = totalEventos.filter(cadaEvento => cadaEvento.category === cadaCategoria)
+
+  return categoriasFiltradas
+})
+
+// ------------ CHECKBOXES --------------
+
+let checkboxes = document.querySelectorAll(".checkbox")
+console.log(checkboxes);
+
+for (element of checkboxes) {
+  element.addEventListener(
+    'click',
+    (event) => buscar(event, totalEventos)
+  )
 }
 
-imprimirEventos(container, data)
 
-// let buttonDetails = document.querySelector('#button')
+function buscar(event, array) {
+  // console.log(event.target.checked);
+  let checkboxesActivados = document.querySelectorAll('.checkbox:checked')
+  // console.log(checkboxesActivados);
+  let arrayFiltrado = []
 
-// console.log(buttonDetails);
-
-// function buscarContenido(evento){
-//   return array.events.filter( event => event.date > array.currentDate)
-//   .map( event => {
-//     contenedor.innerHTML +=
-//         `
-//       <div class="card">
-//       <img src="${event.image}" alt="${event.name}">
-//             <div class="titulo-card">
-//               <h3>${event.name}</h3>
-//               <p>${event.description}</p>
-//             </div>
-//             <div class="pie-de-card">
-//               <p>Price: $${event.price}</p>
-//               <a class="button" href="./details.html">See more</a>
-//             </div>
-//       `
-//   } )
-// }
-
-/* buttonDetails.addEventListener('click') */
-
-/* let searchBar = document.getElementsByClassName('search-bar')
-
-searchBar.addEventListener('change', function (event) {
-  mentors = filter('isSpecialist', event.target.value)
-  updateMentorsList(mentorsList, mentors, appendMentorToList)
-}) */
+  if (event.target.checked) {
+    arrayFiltrado = array.filter(ele => ele.category.toLowerCase() === event.target.value.toLowerCase())
+  } else {
+    arrayFiltrado = array
+    arrayFiltrado = [...arrayFiltrado]
+  }
+  imprimirEventos(container, arrayFiltrado)
+  console.log(arrayFiltrado);
+}
