@@ -116,7 +116,7 @@ nav a:hover{
 }
 
 .seleccionador{
-    width: 50%;
+    width: 65%;
     display: flex;
     justify-content: center;
 }
@@ -124,19 +124,21 @@ nav a:hover{
 .seleccionador fieldset{
     border: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     padding-top: 1rem;
     color: white;
 }
 
 .seleccionador fieldset label{
     font-size: 1.7rem;
+    display: flex;
+    gap: .8rem;
 }
 
 .buscador{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 35%;
     padding-top: 1rem;
     gap: .2rem;
 }
@@ -154,6 +156,21 @@ nav a:hover{
 .search-button img{
     width: 30px;
     height: 30px;
+}
+
+.not-found{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid white;
+    border-radius: 10px;
+    padding: 1.4rem;
+}
+
+.not-found h3{
+    font-size: 3.7rem;
+    color: rgb(16, 16, 85);
 }
 
 .container-cards{
@@ -196,6 +213,12 @@ nav a:hover{
     flex-direction: column;
     width: 90%;
     align-items: center;
+}
+
+#category-css{
+    background-color: black;
+    padding: 2%;
+    border-radius: 10px;
 }
 
 .titulo-card h3{
@@ -663,7 +686,11 @@ tbody td{
 
     .seleccionador fieldset{
         flex-direction: column;
-        gap: .1rem;
+        gap: .4rem;
+    }
+
+    .seleccionador fieldset label{
+        font-size: 1.7rem;
     }
 
     .card{

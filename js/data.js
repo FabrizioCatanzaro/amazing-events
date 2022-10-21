@@ -2,7 +2,7 @@ let data ={
   "currentDate": "2022-01-01",
   "events": [
     {
-      _id: 1,
+      "_id": 1,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Feriadecomidas7.jpg",
       "name":"Collectivities Party",
       "date":"2021-12-12",
@@ -14,7 +14,7 @@ let data ={
       "price":5
     },
     {
-      _id: 2,
+      "_id": 2,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Feriadecomidas2.jpg",
       "name":"Korean style",
       "date":"2022-08-12",
@@ -26,7 +26,7 @@ let data ={
       "price":10
     },
     {
-      _id: 3,
+      "_id": 3,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Salidaalmuseo5.jpg",
       "name":"Jurassic Park",
       "date":"2021-11-02",
@@ -38,7 +38,7 @@ let data ={
       "price":15
     },
     {
-      _id: 4,
+      "_id": 4,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Salidaalmuseo1.jpg",
       "name":"Parisian Museum",
       "date":"2022-11-02",
@@ -50,7 +50,7 @@ let data ={
       "price":3500
     },
     {
-      _id: 5,
+      "_id": 5,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Fiestadedisfraces2.jpg",
       "name":"Comicon",
       "date":"2021-02-12",
@@ -62,7 +62,7 @@ let data ={
       "price":54
     },
     {
-      _id: 6,
+      "_id": 6,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Fiestadedisfraces1.jpg",
       "name":"Halloween Night",
       "date":"2022-02-12",
@@ -74,7 +74,7 @@ let data ={
       "price":12
     },
     {
-      _id: 7,
+      "_id": 7,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Conciertodemusica1.jpg",
       "name":"Metallica in concert",
       "date":"2022-01-22",
@@ -86,7 +86,7 @@ let data ={
       "price":150
     },
     {
-      _id: 8,
+      "_id": 8,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Conciertodemusica2.jpg",
       "name":"Electronic Fest",
       "date":"2021-01-22",
@@ -98,7 +98,7 @@ let data ={
       "price":250
       },
     {
-      _id: 9,
+      "_id": 9,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Maraton3.jpg",
       "name":"10K for life",
       "date":"2021-03-01",
@@ -110,7 +110,7 @@ let data ={
       "price":3
     },
     {
-      _id: 10,
+      "_id": 10,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Maraton1.jpg",
       "name":"15K NY",
       "date":"2022-03-01",
@@ -122,7 +122,7 @@ let data ={
       "price":3
       },
     {
-      _id: 11,
+      "_id": 11,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Libros7.jpg",
       "name":"School's book fair",
       "date":"2022-10-15",
@@ -134,7 +134,7 @@ let data ={
       "price":1
     },
     {
-      _id: 12,
+      "_id": 12,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Libros3.jpg",
       "name":"Just for your kitchen",
       "date":"2021-11-09",
@@ -146,7 +146,7 @@ let data ={
       "price":100
     },
     {
-      _id: 13,
+      "_id": 13,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Cine3.jpg",
       "name":"Batman",
       "date":"2021-3-11",
@@ -158,7 +158,7 @@ let data ={
       "price":225
     },
     {
-      _id: 14,
+      "_id": 14,
       "image":"https://amazingeventsapi.herokuapp.com/api/img/Cine7.jpg",
       "name":"Avengers",
       "date":"2022-10-15",
