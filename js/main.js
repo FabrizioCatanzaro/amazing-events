@@ -5,7 +5,7 @@ let checkboxContainer = document.querySelector('#checkbox-container')
 // ---- TRAIGO LOS EVENTOS DESDE LA API -----
 
 let events;
-fetch('https://mind-hub.up.railway.app/amazing')
+fetch('https://amazing-events.herokuapp.com/api/events')
       .then( data => data.json())
       .then( res => {
         events = res.events
