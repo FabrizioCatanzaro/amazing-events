@@ -5,15 +5,21 @@ let id = location.search
 let param = new URLSearchParams(id)
 let idMetodos = (param.get("id"))
 
+// console.log(id)
+// console.log(param)
+
 let events;
 let currentDate;
-fetch('https://amazing-events.herokuapp.com/api/events')
+fetch('https://mind-hub.up.railway.app/amazing')
       .then( data => data.json())
       .then( res => {
+        // console.log(res)
         events = res.events
-        currentDate = res.currentDate
-        
-        let detalleEvento = events.find( element => element._id === idMetodos )
+        // console.log(events)
+        currentDate = res.date
+        // console.log(currentDate)
+        let detalleEvento = events.find( element => element.id === idMetodos )
+        // console.log(detalleEvento)
 
         if (detalleEvento.date > currentDate) {
           detailsFuture(detalleEvento)
