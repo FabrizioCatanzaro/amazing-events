@@ -9,6 +9,7 @@ fetch('https://mind-hub.up.railway.app/amazing')
       .then( data => data.json())
       .then( res => {
         events = res.events
+        console.log(events);
         imprimirEventos(container, events)
         printChecks(events, checkboxContainer )
         barraBuscador.addEventListener('keyup' , filtrar)
