@@ -5,7 +5,7 @@ let checkboxContainer = document.querySelector('#checkbox-container')
 // ---- TRAIGO LOS EVENTOS DESDE LA API -----
 
 let events;
-fetch('https://amazing-events.herokuapp.com/api/events')
+fetch('https://mind-hub.up.railway.app/amazing')
       .then( data => data.json())
       .then( res => {
         events = res.events
@@ -34,7 +34,7 @@ function crearCard(evento){
   </div>
   <div class="pie-de-card">
     <p>Price: $${evento.price}</p>
-    <a class="button" href="./details.html?id=${evento._id}">See more</a>
+    <a class="button" href="./details.html?id=${evento.id}">See more</a>
   </div>
   `
 
