@@ -10,7 +10,7 @@ let idMetodos = (param.get("id"))
 
 let events;
 let currentDate;
-fetch('https://mind-hub.up.railway.app/amazing')
+fetch('https://mh-amazing.herokuapp.com/amazing')
       .then( data => data.json())
       .then( res => {
         // console.log(res)
@@ -44,7 +44,7 @@ function detailsPast(eve) {
           <p>Capacity: ${eve.capacity}</p>
           <p>Assistance: ${eve.assistance}</p>
           <p>Price: $${eve.price}</p>
-          <p>Date: ${eve.date}</p>
+          <p>Date: ${eve.date.slice(0,10)}</p>
         </div>
       </div>
     `
@@ -64,7 +64,7 @@ function detailsFuture(eve) {
         <p>Capacity: ${eve.capacity}</p>
         <p>Estimate: ${eve.estimate}</p>
         <p>Price: $${eve.price}</p>
-        <p>Date: ${eve.date}</p>
+        <p>Date: ${eve.date.slice(0,10)}</p>
       </div>
     </div>
   `
