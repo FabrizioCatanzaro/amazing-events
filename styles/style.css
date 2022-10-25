@@ -355,7 +355,8 @@ tbody{
 .table-title>td{
     text-align: center;
     font-weight: bold;
-    text-shadow: 2px 2px black ;
+    text-shadow: 2px 2px black;
+    background-color: rgb(12, 12, 117);
 }
 
 tbody td{
