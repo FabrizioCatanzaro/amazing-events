@@ -3,8 +3,11 @@
 
 This site is being constantly updated thanks to
 [Mindhub](https://mindhublab.com "Mindhub site")
+=======
+Visit this websit on:
+[Amazing Events](https://fabriziocatanzaro.github.io/amazing-events/ "Amazing Events")
+
+*UPDATE: API is under maintenance!*
 
 * Developed by Fabrizio Catanzaro
 * Buenos Aires, Argentina
-
-**Hope you enjoy it. Don't forget to leave me your feedback!**
