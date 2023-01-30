@@ -222,12 +222,12 @@ nav a:hover{
 }
 
 .titulo-card h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
 }
 
 .titulo-card p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -336,7 +336,7 @@ nav a:hover{
 thead{
     background-color: rgb(16, 16, 85);
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
 }
 
 thead th{
@@ -347,8 +347,16 @@ thead th{
 tbody{
     background-color: rgb(17, 17, 164);
     font-size: 1.5rem;
+    text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
+}
+
+.table-title>td{
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    background-color: rgb(12, 12, 117);
 }
 
 tbody td{
@@ -716,6 +724,10 @@ tbody td{
     
     .pie-de-card a{
         font-size: 1.1rem;
+    }
+
+    thead{
+        font-size: 1.4rem;
     }
 
     .container-footer{
