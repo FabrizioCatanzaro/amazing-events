@@ -1,5 +1,5 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { BACK_URL } from '../url';
+import { BACK_URL } from './url';
 
 let container = document.getElementsByClassName('container-cards')[0]
 let barraBuscador = document.getElementById('search-bar')
