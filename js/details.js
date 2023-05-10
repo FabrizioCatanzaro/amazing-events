@@ -1,3 +1,6 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+import { BACK_URL } from '../url';
+
 let containerDetails = document.getElementsByClassName('container-cards-details')[0]
 // let totalEventos = data.events
 
@@ -10,15 +13,14 @@ let idMetodos = (param.get("id"))
 
 let events;
 let currentDate;
-fetch('https://mh-amazing.herokuapp.com/amazing')
-      .then( data => data.json())
+axios.get(`${BACK_URL}`)
       .then( res => {
         // console.log(res)
-        events = res.events
+        events = res.data.res
         // console.log(events)
-        currentDate = res.date
+        currentDate = '2022-01-01'
         // console.log(currentDate)
-        let detalleEvento = events.find( element => element.id === idMetodos )
+        let detalleEvento = events.find( element => element._id === idMetodos )
         // console.log(detalleEvento)
 
         if (detalleEvento.date > currentDate) {

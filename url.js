@@ -1,0 +1,1 @@
+export const BACK_URL= 'https://projects-back.up.railway.app/api/amazing'

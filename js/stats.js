@@ -1,3 +1,6 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+import { BACK_URL } from '../url';
+
 let $contTablas = document.querySelector('.tablas-general')
 const $table1 = document.querySelector('.tabla-1')
 const $table2 = document.querySelector('.tabla-2')
@@ -9,11 +12,11 @@ let events
 let pastEvents
 let futureEvents
 
-fetch('https://mh-amazing.herokuapp.com/amazing')
-    .then(data => data.json())
+axios.get(`${BACK_URL}`)
     .then(res => {
-        events = res.events
-        currentDate = res.date
+        events = res.data.res
+        console.log(events);
+        let currentDate = '2022-01-01'
         pastEvents = events.filter(eachEve => eachEve.date < currentDate)
         futureEvents = events.filter(eachEve => eachEve.date > currentDate)
 
@@ -102,6 +105,9 @@ function impTabla2(element) {
             capacity += event.capacity
             estimate += event.estimate
             profits += event.profit
+        }
+        if(event.category === 'Food Fair'){
+            console.log(event);
         }
     })
     $table2.innerHTML += `

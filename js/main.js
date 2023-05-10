@@ -1,3 +1,6 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+import { BACK_URL } from '../url';
+
 let container = document.getElementsByClassName('container-cards')[0]
 let barraBuscador = document.getElementById('search-bar')
 let checkboxContainer = document.querySelector('#checkbox-container')
@@ -5,10 +8,12 @@ let checkboxContainer = document.querySelector('#checkbox-container')
 // ---- TRAIGO LOS EVENTOS DESDE LA API -----
 
 let events;
-fetch('https://mh-amazing.herokuapp.com/amazing')
-      .then( data => data.json())
+
+const bringEvents = async() => {
+  axios.get(`${BACK_URL}`)
       .then( res => {
-        events = res.events
+        console.log(res);
+        events = res.data.res
         console.log(events);
         imprimirEventos(container, events)
         printChecks(events, checkboxContainer )
@@ -16,7 +21,8 @@ fetch('https://mh-amazing.herokuapp.com/amazing')
         checkboxContainer.addEventListener( 'change', filtrar)
       })
       .catch ( err => console.log(err))
-
+}
+bringEvents()
 // -------------------- FUNCIONES ----------------------------
 
 // -- FUNCION PARA CREAR LOS EVENTOS EN UNA CARD SIN IMPRIMIR AÚN --
@@ -35,7 +41,7 @@ function crearCard(evento){
   </div>
   <div class="pie-de-card">
     <p>Price: $${evento.price}</p>
-    <a class="button" href="./details.html?id=${evento.id}">See more</a>
+    <a class="button" href="./details.html?id=${evento._id}">See more</a>
   </div>
   `
 

@@ -1,3 +1,6 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+import { BACK_URL } from '../url';
+
 let container = document.getElementsByClassName('container-cards')[0]
 let barraBuscador = document.getElementById('search-bar')
 let checkboxContainer = document.querySelector('#checkbox-container')
@@ -7,11 +10,10 @@ let checkboxContainer = document.querySelector('#checkbox-container')
 let events
 let pastEvents
 
-fetch('https://mh-amazing.herokuapp.com/amazing')
-      .then( data => data.json())
+axios.get(`${BACK_URL}`)
       .then( res => {
-        events = res.events
-        currentDate = res.date
+        events = res.data.res
+        let currentDate = '2022-01-01'
         pastEvents = events.filter(cadaevent => cadaevent.date < currentDate)
         console.log(pastEvents)
         imprimirEventos(container, pastEvents)
