@@ -1,1 +1,1 @@
-export const BACK_URL= 'https://projects-back.up.railway.app/api/amazing'
+export const BACK_URL= 'https://api-amazing-events.onrender.com/api/events'
