@@ -1,5 +1,5 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { BACK_URL } from '../url';
+import { BACK_URL } from './url.js';
 
 let container = document.getElementsByClassName('container-cards')[0]
 let barraBuscador = document.getElementById('search-bar')
@@ -12,8 +12,8 @@ let pastEvents
 
 axios.get(`${BACK_URL}`)
       .then( res => {
-        events = res.data.res
-        let currentDate = '2022-01-01'
+        events = res.data
+        let currentDate = new Date().toISOString().split('T')[0]
         pastEvents = events.filter(cadaevent => cadaevent.date < currentDate)
         console.log(pastEvents)
         imprimirEventos(container, pastEvents)
@@ -41,7 +41,7 @@ function crearCard(evento){
   </div>
   <div class="pie-de-card">
     <p>Price: $${evento.price}</p>
-    <a class="button" href="./details.html?id=${evento.id}">See more</a>
+    <a class="button" href="./details.html?id=${evento._id}">See more</a>
   </div>
   `
 

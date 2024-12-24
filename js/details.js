@@ -1,5 +1,5 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { BACK_URL } from '../url';
+import { BACK_URL } from './url.js';
 
 let containerDetails = document.getElementsByClassName('container-cards-details')[0]
 // let totalEventos = data.events
@@ -16,9 +16,9 @@ let currentDate;
 axios.get(`${BACK_URL}`)
       .then( res => {
         // console.log(res)
-        events = res.data.res
-        // console.log(events)
-        currentDate = '2022-01-01'
+        events = res.data
+        console.log(events)
+        currentDate = new Date().toISOString().split('T')[0]
         // console.log(currentDate)
         let detalleEvento = events.find( element => element._id === idMetodos )
         // console.log(detalleEvento)

@@ -1,5 +1,5 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { BACK_URL } from '../url';
+import { BACK_URL } from './url.js';
 
 let $contTablas = document.querySelector('.tablas-general')
 const $table1 = document.querySelector('.tabla-1')
@@ -14,9 +14,9 @@ let futureEvents
 
 axios.get(`${BACK_URL}`)
     .then(res => {
-        events = res.data.res
+        events = res.data
         console.log(events);
-        let currentDate = '2022-01-01'
+        let currentDate = new Date().toISOString().split('T')[0]
         pastEvents = events.filter(eachEve => eachEve.date < currentDate)
         futureEvents = events.filter(eachEve => eachEve.date > currentDate)
 

@@ -1,5 +1,5 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import { BACK_URL } from './url';
+import {BACK_URL} from './url.js'
 
 let container = document.getElementsByClassName('container-cards')[0]
 let barraBuscador = document.getElementById('search-bar')
@@ -13,7 +13,7 @@ const bringEvents = async() => {
   axios.get(`${BACK_URL}`)
       .then( res => {
         console.log(res);
-        events = res.data.res
+        events = res.data
         console.log(events);
         imprimirEventos(container, events)
         printChecks(events, checkboxContainer )
