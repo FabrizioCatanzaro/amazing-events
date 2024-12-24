@@ -116,16 +116,21 @@ nav a:hover{
 }
 
 .seleccionador{
-    width: 65%;
+    max-width: 65%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
 
 .seleccionador fieldset{
     border: none;
     display: flex;
-    gap: 2rem;
-    padding-top: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
     color: white;
 }
 
@@ -159,28 +164,27 @@ nav a:hover{
 }
 
 .not-found{
-    background-color: white;
+    background-color: #151019;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 10px solid white;
+    border: 2px solid #88C8FF;
     border-radius: 10px;
     padding: 1.4rem;
 }
 
 .not-found h3{
     font-size: 3.7rem;
-    color: rgb(16, 16, 85);
+    color: #88C8FF;
 }
 
 .container-cards{
-
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8rem;
+    gap: 6rem;
 }
 
 .card{
@@ -192,12 +196,13 @@ nav a:hover{
     align-items: center;
     justify-content: space-evenly;
     border-radius: 10px;
+    transition: all .35s ease-in-out;
 }
 
 .card:hover{
-    transform: scale(1.2);
-    transition: .5s;
-    transition: all .4s ease-in-out;
+    transform: scale(1.006);
+    box-shadow: -10px -10px 10px black;
+    transition: all .35s ease-in-out;
 }
 
 .card img{
@@ -420,11 +425,12 @@ tbody td{
 } 
 
 .titulo-card-details h3{
-    font-size: 6rem;
+    font-size: 4rem;
+    text-align: center;
 }
 
 .titulo-card-details p{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 

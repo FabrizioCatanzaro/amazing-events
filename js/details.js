@@ -42,7 +42,6 @@ function detailsPast(eve) {
         <div class="titulo-card-details">
           <h3>${eve.name}</h3>
           <p>Category: ${eve.category}</p>
-          <p>Place: ${eve.place}</p>
           <p>Capacity: ${eve.capacity}</p>
           <p>Assistance: ${eve.assistance}</p>
           <p>Price: $${eve.price}</p>
@@ -62,7 +61,6 @@ function detailsFuture(eve) {
       <div class="titulo-card-details">
         <h3>${eve.name}</h3>
         <p>Category: ${eve.category}</p>
-        <p>Place: ${eve.place}</p>
         <p>Capacity: ${eve.capacity}</p>
         <p>Estimate: ${eve.estimate}</p>
         <p>Price: $${eve.price}</p>
